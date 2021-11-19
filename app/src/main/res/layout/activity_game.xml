@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+
+    >
+    <fragment android:name="com.example.games.ReStartFragment"
+        android:id="@+id/fragment_re_start"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingClass" />
+
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </TextView>
+
+    <TextView
+        android:id="@+id/gameHelp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+  >
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/textViewLeft"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/gameHelp"
+        android:layout_alignParentStart="true"
+
+      >
+
+    </TextView>
+    <TextView
+        android:id="@+id/textViewRight"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/gameHelp"
+        >
+
+    </TextView>
+
+    <Button
+        android:id="@+id/yesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewRight"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="223dp"
+        android:onClick="guessYes"
+        android:text="@string/yes" />
+
+    <Button
+        android:id="@+id/noButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/yesButton"
+        android:layout_alignParentEnd="true"
+
+
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="11dp"
+        android:layout_toStartOf="@+id/yesButton"
+        android:onClick="guessNo"
+        android:text="@string/no" />
+
+    <Button
+        android:id="@+id/toResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noButton"
+        android:layout_alignParentEnd="true"
+        android:text="@string/go_to_result"
+        android:onClick="toResult"
+        />
+
+</RelativeLayout>

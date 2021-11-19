@@ -2,15 +2,19 @@ package com.example.games;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Patterns;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.util.Patterns;
+
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
+
     EditText firstName, lastName, email, password, repeatPassword;
     final int MIN_PASSWORD_LENGTH = 6;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,14 +23,15 @@ public class MainActivity extends AppCompatActivity {
         viewInitializations();
     }
 
-    protected void viewInitializations()
-    {
+    void viewInitializations() {
         firstName = findViewById(R.id.first_name);
         lastName = findViewById(R.id.last_name);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         repeatPassword = findViewById(R.id.repeat_password);
 
+        // To show back button in actionbar
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     boolean isEmailValid(String email) {
@@ -76,8 +81,17 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    public void signUp() {
+    public void signUp(View v) {
         if (validateInput()) {
+
+            // Input is valid, here send data to your server
+
+            String resFirstName = firstName.getText().toString();
+            String resLastName = lastName.getText().toString();
+            String resEmail = email.getText().toString();
+            String resPassword = password.getText().toString();
+            String resRepeatPassword = repeatPassword.getText().toString();
+
             Toast.makeText(this, "Login Success", Toast.LENGTH_SHORT).show();
             // Here you can call you API
 

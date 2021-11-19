@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_game_settings"
+        android:orderInCategory="1"
+        android:title="Game Settings"
+        />
+    <item
+        android:id="@+id/action_open_settings"
+        android:orderInCategory="2"
+        android:title="Edit Settings"
+        />
+    <item
+        android:id="@+id/action_save_settings"
+        android:orderInCategory="3"
+        android:title="Save"
+        />
+</menu>
